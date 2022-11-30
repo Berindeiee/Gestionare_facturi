@@ -20,8 +20,9 @@ public class Factura_curent extends Factura{
 
     @Override
     public String toString() {
-        return "Factura\nid: "+id+"\nfactura pentru: "+tip+"\n"+nume+"\nFirma emițătoare: "+Firma+"\n" +
-                "Curent consumat: "+consum+"KWh\nSuma totală: "+suma
-                +"\nSumă plătită: "+suma_platita;
+        return "Factura\nid: " + id + "\nfactura pentru: " + tip + "\n" + nume + "\nFirma emițătoare: " + Firma + "\n" +
+                "Curent consumat: " + consum + "KWh\nSuma totală: " + suma
+                + "\nSumă plătită: " + suma_platita;
+    }
 
 }
