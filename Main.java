@@ -9,6 +9,7 @@ public class Main {
         System.out.println(a2);
         System.out.println();
         System.out.println(a3);
+        baza_de_date_test.connect();
 
     }
 }

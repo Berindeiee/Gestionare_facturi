@@ -10,5 +10,10 @@ public class Factura_produse extends Factura{
     public Factura_produse() {
         this.lista_produse = null;
     }
-
+    @Override
+    public String toString() {
+        return "Factura\nid: " + id + "\nfactura pentru: " + tip + "\n" + nume + "\nFirma emițătoare: " + Firma + "\n" +
+                "Produse: " + lista_produse + "\nSuma totală: " + suma
+                + "\nSumă plătită: " + suma_platita;
+    }
 }
