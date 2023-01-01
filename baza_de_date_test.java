@@ -14,7 +14,7 @@ public class baza_de_date_test {
         Connection conn = null;
         try {
             // db parameters
-            String url = "jdbc:sqlite:C:/sqlite/p3.sqlite";
+            String url = "jdbc:sqlite:C:/p3-proiect-ir-sg2-Berindeiee/Proiect-p3.sqlite";
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
@@ -35,7 +35,4 @@ public class baza_de_date_test {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        connect();
-    }
 }

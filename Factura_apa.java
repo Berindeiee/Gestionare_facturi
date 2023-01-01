@@ -1,10 +1,12 @@
+import java.util.Date;
 
 public class Factura_apa extends Factura{
     private double cantitate_rece;
     private double cantitate_calda;
 
-    public Factura_apa(String nume, Tip tip, String firma, double suma, String id, double cantitate_rece, double cantitate_calda) {
-        super(nume, tip, firma, suma, id);
+    public Factura_apa(String nume, Tip tip, String firma, double suma, String id, double cantitate_rece,
+                       double cantitate_calda, Date data) {
+        super(nume, tip, firma, suma, id,data);
         this.cantitate_rece = cantitate_rece;
         this.cantitate_calda = cantitate_calda;
     }
@@ -31,7 +33,9 @@ public class Factura_apa extends Factura{
     public void setCantitate_calda(double cantitate_calda) {
         this.cantitate_calda = cantitate_calda;
     }
-
+    public String getTip() {
+        return "apa";
+    }
     @Override
     public String toString() {
         return "Factura\nid: "+id+"\nfactura pentru: "+tip+"\n"+nume+"\nFirma emițătoare: "+Firma+"\n" +

@@ -1,3 +1,6 @@
+import javax.xml.crypto.Data;
+import java.util.Date;
+
 public class Factura {
     protected String nume;
     protected Tip tip;
@@ -5,14 +8,16 @@ public class Factura {
     protected double suma_platita;
     protected double suma;
     protected String id;
+    protected Date data;
 
-    public Factura(String nume, Tip tip, String firma, double suma, String id) {
+    public Factura(String nume, Tip tip, String firma, double suma, String id,Date data) {
         this.nume = nume;
         this.tip = tip;
         Firma = firma;
         this.suma_platita = 0;
         this.suma = suma;
         this.id = id;
+        this.data=data;
     }
     public Factura(){
         this.nume = "";
@@ -27,9 +32,6 @@ public class Factura {
         return nume;
     }
 
-    public Tip getTip() {
-        return tip;
-    }
 
     public String getFirma() {
         return Firma;
@@ -57,6 +59,14 @@ public class Factura {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
     }
 
     @Override

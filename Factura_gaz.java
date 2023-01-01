@@ -1,8 +1,10 @@
+import java.util.Date;
+
 public class Factura_gaz extends Factura{
     protected double consum;
 
-    public Factura_gaz(String nume, Tip tip, String firma, double suma, String id, double consum) {
-        super(nume, tip, firma, suma, id);
+    public Factura_gaz(String nume, Tip tip, String firma, double suma, String id, double consum, Date data) {
+        super(nume, tip, firma, suma, id,data);
         this.consum = consum;
     }
 
@@ -13,7 +15,9 @@ public class Factura_gaz extends Factura{
     public double getConsum() {
         return consum;
     }
-
+    public String getTip() {
+        return "gaz";
+    }
     public void setConsum(double consum) {
         this.consum = consum;
     }
