@@ -5,7 +5,7 @@ public class Factura_apa extends Factura{
     private double cantitate_calda;
 
     public Factura_apa(String nume, Tip tip, String firma, double suma, String id, double cantitate_rece,
-                       double cantitate_calda, Date data) {
+                       double cantitate_calda, String data) {
         super(nume, tip, firma, suma, id,data);
         this.cantitate_rece = cantitate_rece;
         this.cantitate_calda = cantitate_calda;

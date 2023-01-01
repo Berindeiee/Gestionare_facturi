@@ -28,10 +28,9 @@ public class InsertDB {
 
 
     public void insert(Factura facturaa) {
-        if (facturaa instanceof Factura_apa) {
+        if (facturaa instanceof Factura_apa factura) {
             String sql = "INSERT INTO factura_apa(nume,tip,firma,suma,suma_platita,cantitate_calda,cantitate_rece,data) " +
                     "VALUES(?,?,?,?,?,?,?,?)";
-            Factura_apa factura=(Factura_apa)facturaa;
             try (Connection conn = this.connect();
                  PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, factura.getNume());
@@ -41,15 +40,14 @@ public class InsertDB {
                 pstmt.setDouble(5, factura.getSuma_platita());
                 pstmt.setDouble(6, factura.getCantitate_calda());
                 pstmt.setDouble(7, factura.getCantitate_rece());
-                pstmt.setString(8, factura.getData().toString());
+                pstmt.setString(8, factura.getData());
                 pstmt.executeUpdate();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
-        } else if (facturaa instanceof Factura_gaz) {
+        } else if (facturaa instanceof Factura_gaz factura) {
             String sql = "INSERT INTO factura_gaz(nume,tip,firma,suma,suma_platita,consum,data) " +
                     "VALUES(?,?,?,?,?,?,?)";
-            Factura_gaz factura=(Factura_gaz)facturaa;
             try (Connection conn = this.connect();
                  PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, factura.getNume());
@@ -58,15 +56,14 @@ public class InsertDB {
                 pstmt.setDouble(4, factura.getSuma());
                 pstmt.setDouble(5, factura.getSuma_platita());
                 pstmt.setDouble(6, factura.getConsum());
-                pstmt.setString(7, factura.getData().toString());
+                pstmt.setString(7, factura.getData());
                 pstmt.executeUpdate();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
-        } else if (facturaa instanceof Factura_curent) {
+        } else if (facturaa instanceof Factura_curent factura) {
             String sql = "INSERT INTO factura_curent(nume,tip,firma,suma,suma_platita,consum,data) " +
                     "VALUES(?,?,?,?,?,?,?)";
-            Factura_curent factura=(Factura_curent)facturaa;
             try (Connection conn = this.connect();
                  PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, factura.getNume());
@@ -75,7 +72,7 @@ public class InsertDB {
                 pstmt.setDouble(4, factura.getSuma());
                 pstmt.setDouble(5, factura.getSuma_platita());
                 pstmt.setDouble(6, factura.getConsum());
-                pstmt.setString(7, factura.getData().toString());
+                pstmt.setString(7, factura.getData());
                 pstmt.executeUpdate();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());

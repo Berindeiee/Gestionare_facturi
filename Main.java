@@ -3,8 +3,8 @@ import java.sql.*;
 public class Main {
     public static void main(String[] args) {
         Factura a1=new Factura();
-        Factura_apa a2=new Factura_apa(), b2= new Factura_apa("Ana",Tip.Apa,"uvt",45555,"23",200,180,new Date(1,2,2022)),
-                c2= new Factura_apa("Adi",Tip.Apa,"uvt",45555,"23",200,180,new Date(1, 2,2022));
+        Factura_apa a2=new Factura_apa(), b2= new Factura_apa("Ana",Tip.Apa,"uvt",45555,"23",200,180,"26.06.2002"),
+                c2= new Factura_apa("Adi",Tip.Apa,"uvt",45555,"23",200,180,"21.05.2002");
         Factura_curent a3=new Factura_curent();
         System.out.println(a1);
         System.out.println();

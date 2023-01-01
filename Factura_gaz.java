@@ -3,7 +3,7 @@ import java.util.Date;
 public class Factura_gaz extends Factura{
     protected double consum;
 
-    public Factura_gaz(String nume, Tip tip, String firma, double suma, String id, double consum, Date data) {
+    public Factura_gaz(String nume, Tip tip, String firma, double suma, String id, double consum, String data) {
         super(nume, tip, firma, suma, id,data);
         this.consum = consum;
     }

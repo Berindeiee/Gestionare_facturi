@@ -1,4 +1,4 @@
-import javax.xml.crypto.Data;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Factura {
@@ -8,9 +8,9 @@ public class Factura {
     protected double suma_platita;
     protected double suma;
     protected String id;
-    protected Date data;
+    protected String data;
 
-    public Factura(String nume, Tip tip, String firma, double suma, String id,Date data) {
+    public Factura(String nume, Tip tip, String firma, double suma, String id,String data) {
         this.nume = nume;
         this.tip = tip;
         Firma = firma;
@@ -26,6 +26,7 @@ public class Factura {
         this.suma_platita = 0;
         this.suma = 0;
         this.id = "000";
+        this.data="01.01.2023";
     }
 
     public String getNume() {
@@ -61,11 +62,11 @@ public class Factura {
         this.id = id;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
